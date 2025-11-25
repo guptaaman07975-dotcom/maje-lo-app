@@ -1,0 +1,7 @@
+{
+  "name": "Maje Lo - Voice Chat & Admin",
+  "description": "A real-time voice chat party room where you act as the Admin. Manage the AI host, test moderation capabilities, and enjoy the party atmosphere.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

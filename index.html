@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Maje Lo - Party Room</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #0b0b14;
+        color: white;
+        font-family: 'Urbanist', sans-serif;
+        overscroll-behavior: none;
+      }
+      
+      /* Hide Scrollbar */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+
+      /* Speaking Ring Animation */
+      .speaking-ring {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+        animation: pulse-green 1.5s infinite;
+      }
+      @keyframes pulse-green {
+        0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+        70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+        100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+      }
+
+      /* Gift Animations */
+      @keyframes fly-rocket {
+        0% { transform: translate(0, 100vh) scale(0.5); opacity: 0; }
+        20% { opacity: 1; }
+        100% { transform: translate(0, -100vh) scale(1.5); opacity: 0; }
+      }
+      .anim-rocket { animation: fly-rocket 2s ease-out forwards; }
+
+      @keyframes drive-car {
+        0% { transform: translateX(100vw) scale(0.8); }
+        50% { transform: translateX(0) scale(1.2); }
+        100% { transform: translateX(-100vw) scale(0.8); }
+      }
+      .anim-car { animation: drive-car 3s ease-in-out forwards; }
+
+      @keyframes float-heart {
+        0% { transform: translateY(0) scale(0.5); opacity: 1; }
+        100% { transform: translateY(-300px) scale(1.5); opacity: 0; }
+      }
+      .anim-heart { animation: float-heart 2s ease-out forwards; }
+
+      /* Visualizer */
+      .visualizer-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        height: 20px;
+      }
+      .bar {
+        width: 3px;
+        background: #fff;
+        border-radius: 999px;
+        animation: dance 0.5s infinite ease-in-out alternate;
+      }
+      @keyframes dance {
+        0% { height: 20%; opacity: 0.5; }
+        100% { height: 100%; opacity: 1; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
